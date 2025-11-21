@@ -1,50 +1,62 @@
 {
-  "hash": "db3defbf",
-  "configHash": "4801a8a1",
-  "lockfileHash": "25b9491b",
-  "browserHash": "cb86b175",
+  "hash": "bdd689ac",
+  "configHash": "293ac7c1",
+  "lockfileHash": "8ddc1f21",
+  "browserHash": "49a49a74",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "40b73f26",
+      "fileHash": "d24f5718",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "9fb0987b",
+      "fileHash": "c29df5f7",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "b0c18308",
+      "fileHash": "6eba1af0",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "e58eedb1",
+      "fileHash": "fa6a4d22",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "5dba4250",
+      "fileHash": "5cadf068",
       "needsInterop": false
     },
     "aos": {
       "src": "../../../../../../node_modules/aos/dist/aos.js",
       "file": "aos.js",
-      "fileHash": "c01de93b",
+      "fileHash": "f34d4a1c",
       "needsInterop": true
+    },
+    "emailjs-com": {
+      "src": "../../../../../../node_modules/emailjs-com/es/index.js",
+      "file": "emailjs-com.js",
+      "fileHash": "eb0c62af",
+      "needsInterop": false
     },
     "zone.js": {
       "src": "../../../../../../node_modules/zone.js/fesm2015/zone.js",
       "file": "zone__js.js",
-      "fileHash": "3a64bd9d",
+      "fileHash": "2d06e3ad",
       "needsInterop": true
+    },
+    "@emailjs/browser": {
+      "src": "../../../../../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "fdd034c9",
+      "needsInterop": false
     }
   },
   "chunks": {
