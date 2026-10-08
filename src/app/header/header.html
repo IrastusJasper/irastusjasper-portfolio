@@ -4,13 +4,21 @@
       <span class="brand-text">Portfolio</span>
     </div>
     
-    <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+    <button
+      class="hamburger"
+      type="button"
+      (click)="toggleMenu()"
+      [class.active]="isMenuOpen"
+      [attr.aria-expanded]="isMenuOpen"
+      [attr.aria-label]="isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'"
+      aria-controls="primary-navigation"
+    >
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <ul class="navbar-menu" [class.open]="isMenuOpen">
+    <ul id="primary-navigation" class="navbar-menu" [class.open]="isMenuOpen">
       <li class="navbar-item">
         <a class="navbar-link" (click)="closeMenu()">Home</a>
       </li>

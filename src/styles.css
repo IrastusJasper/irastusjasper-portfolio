@@ -1,17 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
 :root {
-  --primary-color: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #a5b4fc;
-  --accent-color: #ec4899;
-  --text-light: #f8fafc;
+  --bg-deep: #040816;
+  --bg-1: #0a1023;
+  --bg-2: #111c33;
+  --panel: rgba(12, 18, 31, 0.45);
+  --panel-strong: rgba(19, 26, 42, 0.7);
+  --glass-highlight: rgba(255, 255, 255, 0.18);
+  --glass-border: rgba(148, 163, 184, 0.28);
+  --primary-color: #8b5cf6;
+  --primary-dark: #6d28d9;
+  --primary-light: #c4b5fd;
+  --accent-color: #22d3ee;
+  --accent-rose: #f472b6;
+  --text-light: #edf6ff;
+  --text-soft: rgba(237, 246, 255, 0.72);
   --dark-secondary: #0f172a;
+  --shadow-warm: rgba(139, 92, 246, 0.32);
+  --shadow-cool: rgba(34, 211, 238, 0.25);
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    transition: all 0.3s ease;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(139, 92, 246, 0.25), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(34, 211, 238, 0.18), transparent 30%),
+    linear-gradient(135deg, var(--bg-deep) 0%, var(--bg-1) 38%, var(--bg-2) 100%);
+  color: var(--text-light);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  top: -8rem;
+  left: -5rem;
+  background: rgba(139, 92, 246, 0.38);
+}
+
+body::after {
+  right: -5rem;
+  bottom: -8rem;
+  background: rgba(34, 211, 238, 0.28);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+main,
+section,
+footer,
+nav {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.35);
+  color: var(--text-light);
 }

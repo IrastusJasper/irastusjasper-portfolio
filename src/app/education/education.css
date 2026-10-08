@@ -1,20 +1,16 @@
 .container {
   width: 100%;
-  background: linear-gradient(135deg, var(--dark-secondary) 0%, #1e293b 50%, var(--dark-secondary) 100%);
   position: relative;
   overflow: hidden;
 }
 
 .container::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.12), transparent 22%),
+    radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.12), transparent 25%);
   pointer-events: none;
   z-index: 0;
 }
@@ -34,10 +30,10 @@
 }
 
 .education-container h2 {
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -49,29 +45,28 @@
   position: relative;
   margin: 2rem 0;
   padding-left: 2rem;
-  border-left: 3px solid var(--primary-color);
+  border-left: 3px solid rgba(139, 92, 246, 0.5);
   z-index: 2;
 }
 
 .timeline-item {
-  margin-bottom: 2.5rem;
   position: relative;
-  padding: 1.5rem;
-  padding-left: 2rem;
+  margin-bottom: 2.4rem;
+  padding: 1.5rem 1.5rem 1.4rem 2rem;
   text-align: left;
-  background: rgba(30, 41, 59, 0.6);
-  border-radius: 12px;
-  border-left: 4px solid var(--primary-color);
-  border-top: 1px solid rgba(99, 102, 241, 0.2);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 20px 40px rgba(15, 23, 42, 0.2);
+  backdrop-filter: blur(18px) saturate(140%);
   transition: all 0.3s ease;
 }
 
 .timeline-item:hover {
-  background: rgba(30, 41, 59, 0.9);
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
-  transform: translateX(8px);
-  border-color: var(--accent-color);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(34, 211, 238, 0.06));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 24px 48px rgba(139, 92, 246, 0.12);
+  transform: translateX(6px);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .timeline-dot {
@@ -81,47 +76,42 @@
   border-radius: 50%;
   position: absolute;
   left: -10px;
-  top: 25px;
-  border: 3px solid var(--dark-secondary);
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+  top: 28px;
+  border: 3px solid rgba(4, 8, 22, 0.85);
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.5);
 }
 
 .timeline-content h3 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--primary-light);
 }
 
 .timeline-content h4 {
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
   font-size: 1rem;
-  color: rgba(248, 250, 252, 0.8);
+  color: rgba(237, 246, 255, 0.82);
   font-weight: 600;
 }
 
 .timeline-content span {
-  color: rgba(248, 250, 252, 0.6);
+  color: rgba(237, 246, 255, 0.66);
   font-size: 0.9rem;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .timeline-content p {
   margin-top: 0.8rem;
-  font-size: 0.95rem;
-  color: rgba(248, 250, 252, 0.7);
-  line-height: 1.6;
+  font-size: 0.96rem;
+  color: rgba(237, 246, 255, 0.72);
+  line-height: 1.7;
 }
 
-/* Tablet Responsive */
 @media (max-width: 1024px) {
   .education-container {
     padding: 3rem 1.5rem;
-  }
-
-  .education-container h2 {
-    font-size: 2rem;
   }
 
   .timeline {
@@ -129,20 +119,14 @@
   }
 
   .timeline-item {
-    padding: 1.2rem 1rem;
+    padding: 1.2rem 1rem 1.1rem 1.5rem;
   }
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .education-container {
     padding: 2rem 1rem;
     min-height: auto;
-  }
-
-  .education-container h2 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
   }
 
   .timeline {
@@ -152,7 +136,8 @@
 
   .timeline-item {
     margin-bottom: 2rem;
-    padding: 1.2rem 1rem 1.2rem 1.5rem;
+    padding: 1.1rem 1rem 1rem 1.4rem;
+    border-radius: 18px;
   }
 
   .timeline-dot {
@@ -175,28 +160,12 @@
 }
 
 @media (max-width: 480px) {
-  .education-container h2 {
-    font-size: 1.5rem;
-  }
-
   .timeline-item {
     margin-bottom: 1.5rem;
-    padding: 1rem 1rem 1rem 1.2rem;
+    padding: 1rem 0.95rem 0.95rem 1.2rem;
   }
 
   .timeline-content h3 {
     font-size: 1rem;
   }
 }
-
-/* Container Responsive */
-@media (max-width: 768px) {
-  .container {
-    background-attachment: scroll;
-  }
-
-  .container::before {
-    background-attachment: scroll;
-  }
-}
-
